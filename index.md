@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta name="google-site-verification" content="google-site-verification=SybnaCkUfrT1-HkRSFUTP4BEz37Dj-jKjgJLC_9UYmY" />
 <html>
   <title>Interpolation</title>
   <head>
