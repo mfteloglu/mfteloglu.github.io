@@ -61,6 +61,7 @@ h1 {
 
 h2 {
   font-size: 1.1rem;
+  text-transform: uppercase;
   letter-spacing: 0.12em;
   font-family: var(--font-body);
   color: var(--muted);
