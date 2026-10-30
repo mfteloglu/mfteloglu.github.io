@@ -1,46 +1,306 @@
 <!DOCTYPE html>
-<html>
-  <title>Interpolation</title>
-  <head>
-    <style>
-      .main{
-        text-align: center;
-        padding: 70px;
-      
-      }
-      .button{
-        width: 250px;
-        height: 50px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehmet Fatih Teloğlu</title>
+  <meta name="description" content="Mehmet Fatih Teloğlu — Software Engineer based in Munich." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) — GA4, Measurement ID G-35V6TN8B58 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-35V6TN8B58"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-35V6TN8B58');
+  </script>
+</head>
 <body>
+  <main>
 
-<div class="main">
-  x1: <input type="text" name="x1" id="x1">
-  y1: <input type="text" name="y1" id="y1"><br>
-  x2: <input type="text" name="x2" id="x2">
-  y2: <input type="text" name="y2" id="y2"><br>
-  x3: <input type="text" name="x1" id="x3">
-  y3: <input type="text" name="x3" id="y3" readonly><br>
-  <button type="submit" class="button" onclick="myFunction()">Hesapla</button>
+    <!-- ============ HEADER ============ -->
+    <header class="intro">
+      <h1>Mehmet Fatih Teloğlu</h1>
+      <p class="tagline">software engineer · munich, germany</p>
+      <ul class="contact">
+        <li><a href="mailto:mfteloglu@gmail.com">mfteloglu@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/mfteloglu" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/mfteloglu" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </header>
 
-<p>Değerleri girin ve interpolasyonu hesaplayın.</p>
-</div>
+    <!-- ============ TABS ============ -->
+    <!-- To add/remove a tab: edit this nav AND the matching <section data-tab="..."> below. -->
+    <nav class="tabs" role="tablist">
+      <button class="tab" data-target="about" aria-selected="true">about</button>
+      <button class="tab" data-target="experience">experience</button>
+      <button class="tab" data-target="projects">projects</button>
+      <button class="tab" data-target="education">education</button>
+      <button class="tab" data-target="skills">skills</button>
+      <button class="tab" data-target="extras">extras</button>
+    </nav>
 
-<script>
-function myFunction() {
-  var x1 = document.getElementById("x1").value;
-  var y1 = document.getElementById("y1").value;
-  var x2 = document.getElementById("x2").value;
-  var y2 = document.getElementById("y2").value;
-  var x3 = document.getElementById("x3").value;
+    <!-- ============ ABOUT ============ -->
+    <section data-tab="about" class="panel">
+      <h2>About</h2>
 
-  var answer = ((x2-x3)/(x2-x1))*y1 + ((x1-x3)/(x1-x2))*y2
-  document.getElementById("y3").value = answer;
-}
-</script>
+      <p>
+        I'm a software engineer graduated from my MSc in Informatics at the Technical
+        University of Munich. I enjoy building end-to-end systems, from
+        mainly backend services and data pipelines to the user-facing layer on top.
+        I have shipped many different products in different domains, from automotive to academic research,
+        and I like seeing new architectures and tech stacks in production.
+        Most recently I've been mostly focused on building stuff with coding agents,
+        trying new tools on AI space, and exploring how fast I can turn an idea to a product.
+      </p>
 
+        <p>
+        Currently working on <a href="https://apps.apple.com/tr/app/horolog-watch-collection/id6755205027" target="_blank" rel="noopener">Horolog</a> and <a href="https://dugunly.com" target="_blank" rel="noopener">Düğünly</a>.
+      </p>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section data-tab="experience" class="panel">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Student Assistant — HiWi</h3>
+          <span class="meta">Jun 2025 – Mar 2026</span>
+        </div>
+        <p class="sub">Technical University of Munich, School of Education · Munich</p>
+        <ul>
+          <li>Built a web app to analyze human–AI interactions, used by 100+ research participants.</li>
+          <li>Shipped a Chrome extension that tracks user activity across ChatGPT, DeepSeek, Claude, and Gemini.</li>
+          <li>Implemented static and agentic analysis methods to process 5,000+ conversation samples in under a minute.</li>
+        </ul>
+        <p class="stack">.NET · ReactJS · MongoDB · Docker</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Software Engineer — Working Student</h3>
+          <span class="meta">Jun 2023 – Jun 2025</span>
+        </div>
+        <p class="sub">Mercedes-Benz Tech Innovation · Stuttgart</p>
+        <ul>
+          <li>Migrated the test automation pipeline from Jenkins to GitHub Actions, cutting runtime by 30%.</li>
+          <li>Automated test-result publishing to Confluence 3× daily, removing dependence on external reporting tools.</li>
+          <li>Reduced main-dashboard load time by 50% by integrating a Redis cache.</li>
+        </ul>
+        <p class="stack">.NET · Entity Framework · Python · JavaScript · Jenkins · GitHub Actions</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Software Engineer</h3>
+          <span class="meta">Jul 2022 – Apr 2023</span>
+        </div>
+        <p class="sub">Mercedes-Benz Automotive · Istanbul</p>
+        <ul>
+          <li>Developed and maintained a vehicle booking system serving users in 60+ countries across 5 continents.</li>
+          <li>Shipped full-stack features continuously with an international agile team across a 500k+ line, 5-microservice codebase.</li>
+          <li>Resolved 100+ bug tickets and integrated with 50+ internal and external APIs.</li>
+        </ul>
+        <p class="stack">.NET · Entity Framework · Vanilla JS · Azure</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>IT Intern</h3>
+          <span class="meta">Jul 2021 – Jul 2022</span>
+        </div>
+        <p class="sub">Mercedes-Benz Automotive · Istanbul</p>
+        <ul>
+          <li>Ran regression tests and documented 100+ new test cases.</li>
+          <li>Resolved 200+ Jira tickets supporting the service team.</li>
+          <li>Helped the automation team build Cypress scripts and onboarded three new colleagues.</li>
+        </ul>
+        <p class="stack">Jira · Zephyr · Cypress</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Backend Developer Intern</h3>
+          <span class="meta">Aug 2020 – Sep 2020</span>
+        </div>
+        <p class="sub">Baykar Defence · Istanbul</p>
+        <ul>
+          <li>Joined the HMI team to build a WPF desktop application for flight analysis.</li>
+          <li>Visualized real-time drone telemetry at 10 Hz with SciChart, enabling continuous monitoring of live flight data.</li>
+        </ul>
+        <p class="stack">.NET · WPF · JavaScript · Python</p>
+      </article>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section data-tab="education" class="panel">
+      <h2>Education</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>MSc, Informatics</h3>
+          <span class="meta">Apr 2023 – Mar 2026</span>
+        </div>
+        <p class="sub">Technical University of Munich · GPA 1.9 (German scale)</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>BSc, Computer Engineering</h3>
+          <span class="meta">Sep 2017 – Aug 2022</span>
+        </div>
+        <p class="sub">Istanbul Technical University · GPA 3.45 / 4.0</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>High School</h3>
+          <span class="meta">Sep 2013 – Jun 2017</span>
+        </div>
+        <p class="sub">Atatürk Science High School · Istanbul</p>
+      </article>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section data-tab="projects" class="panel">
+      <h2>Projects</h2>
+
+      <article class="entry">
+        <h3><a href="https://dugunly.com" target="_blank" rel="noopener">Düğünly — All-in-one wedding planner</a></h3>
+        <p>Built Düğünly, wedding planning into one app: guest lists, budgets, seating charts, QR-based photo collection, and an AI assistant — so couples stop juggling Excel, WhatsApp, and notebooks.</p>
+        <p class="stack">Python · Flask · LangChain · Gemini API</p>
+      </article>
+
+      <article class="entry">
+        <h3><a href="https://apps.apple.com/tr/app/horolog-watch-collection/id6755205027" target="_blank" rel="noopener">Horolog — Digital watch collection</a></h3>
+        <p>Published an app letting watch lovers verify and log their watches in a virtual case; peaked at 100+ active users.</p>
+        <p class="stack">Flutter · Django · Python · PostgreSQL</p>
+      </article>
+
+
+      <article class="entry">
+        <h3><a href="https://hai.edu.sot.tum.de/" target="_blank" rel="noopener">PromptMirror — LLM usage analysis</a></h3>
+        <p>My student assistant project at TUM. Helps people analyze their LLM usage — used by PhD researchers studying how students learn with LLMs.</p>
+        <p class="stack">.NET · React · Hugging Face · ONNX</p>
+      </article>
+
+      <article class="entry">
+        <h3><a href="https://getfunclass.com/" target="_blank" rel="noopener">Funclass — Payment integration</a></h3>
+        <p>Built a Stripe-based payment system for a tutoring platform as an interdisciplinary project at TUM.</p>
+        <p class="stack">Vue.js · Django · Python · Stripe · Ngrok</p>
+      </article>
+
+      <article class="entry">
+        <h3><a href="https://www.lafamiglia.vc/" target="_blank" rel="noopener">LaFamiglia — Web crawler engine</a></h3>
+        <p>Wrote crawlers spanning 15+ platforms (Crunchbase, Twitter, Product Hunt, …) to surface rising startups for a venture capital firm, as Praktikum course at TUM.</p>
+        <p class="stack">TypeScript · FastAPI · Selenium · Python</p>
+      </article>
+
+      <article class="entry">
+        <h3>Ransomware detection with ML</h3>
+        <p>Built a dataset from VirusShare and MalwareBazaar and trained a model on static-analysis features, reaching &gt;90% accuracy on ransomware detection. <a href="https://github.com/mfteloglu/GradProject" target="_blank" rel="noopener">GitHub</a></p>
+        <p class="stack">Python · Pandas · scikit-learn</p>
+      </article>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section data-tab="skills" class="panel">
+      <h2>Skills</h2>
+      <p><strong>Languages:</strong> C++, C, Python, C#, JavaScript, TypeScript, SQL, Dart, Go</p>
+      <p><strong>Technologies:</strong> .NET, Entity Framework, Flutter, Vue.js, Node.js, Django, AWS, Azure, Docker, Git, Jira</p>
+      <p><strong>Paradigms:</strong> REST, Microservices, OOP</p>
+      <p><strong>AI Tools:</strong> Claude Code, Cursor, Codex, Gemini, Google Flow, Google Stitch, Hugging Face</p>
+    </section>
+
+    <!-- ============ EXTRAS ============ -->
+    <section data-tab="extras" class="panel">
+      <h2>Extras</h2>
+      <ul>
+        <li>Led a team of 4 to build <em>SafeCycle</em>, a cyclist route-safety app — 2nd place at the ITU BTZ startup competition.</li>
+        <li>Top 0.01% of 2 million test takers in Türkiye's national high school and university entrance exams.</li>
+        <li>Volunteer tourism guide in Istanbul, project by <a href="https://www.fatih.bel.tr/tr/main/pages/gonullu-turizm-elcileri-projesi/366" target="_blank" rel="noopener">Fatih Municipality</a>.</li>
+        <li>English teacher for gifted children at <a href="https://usgem.org/cocuk-universitesi/" target="_blank" rel="noopener">Üsküdar Çocuk Üniversitesi</a>.</li>
+        <li>Mentor for international students at TUM, at <a href="https://www.cit.tum.de/en/cit/international/studies/mentoring-programs/" target="_blank" rel="noopener">MINGA program</a>.</li>
+        <li>Fluent in English and Turkish, upper intermediate in German.</li>
+        <li>Love musical instruments, team sports, movies and travel.</li>
+
+      </ul>
+
+      <ul class="socials" aria-label="Personal links">
+        <li>
+          <a href="https://instagram.com/mfteloglu" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 100 100" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#feda75"/>
+                  <stop offset="25%" stop-color="#fa7e1e"/>
+                  <stop offset="50%" stop-color="#d62976"/>
+                  <stop offset="75%" stop-color="#962fbf"/>
+                  <stop offset="100%" stop-color="#4f5bd5"/>
+                </linearGradient>
+              </defs>
+              <rect width="100" height="100" rx="24" fill="url(#ig-grad)"/>
+              <rect x="22" y="22" width="56" height="56" rx="15" fill="none" stroke="#fff" stroke-width="6"/>
+              <circle cx="50" cy="50" r="13" fill="none" stroke="#fff" stroke-width="6"/>
+              <circle cx="69" cy="31" r="4" fill="#fff"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://open.spotify.com/user/9mguk9yqfveak54xn9n9ej40v?si=36f120a399934d22" target="_blank" rel="noopener" aria-label="Spotify">
+            <svg viewBox="0 0 100 100" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" rx="24" fill="#000"/>
+              <circle cx="50" cy="50" r="30" fill="#1ED760"/>
+              <path d="M34 42 Q50 32 66 42" stroke="#000" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M33 51 Q50 39 67 51" stroke="#000" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+              <path d="M32 60 Q50 47 68 60" stroke="#000" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://letterboxd.com/mfteloglu/" target="_blank" rel="noopener" aria-label="Letterboxd">
+            <svg viewBox="0 0 100 100" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" rx="24" fill="#202830"/>
+              <circle cx="30" cy="50" r="14" fill="#FF8000"/>
+              <circle cx="50" cy="50" r="14" fill="#00E054"/>
+              <circle cx="70" cy="50" r="14" fill="#40BCF4"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Last updated April 2026 · <a href="mailto:mfteloglu@gmail.com">Get in touch</a></p>
+    </footer>
+
+  </main>
+
+  <script>
+    // Tab switching. Reads ?tab=name from URL on load, updates the URL on click,
+    // and toggles .active on both the tab button and its matching panel.
+    (function () {
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.panel');
+      function activate(name) {
+        tabs.forEach(t => {
+          const on = t.dataset.target === name;
+          t.classList.toggle('active', on);
+          t.setAttribute('aria-selected', on);
+        });
+        panels.forEach(p => p.classList.toggle('active', p.dataset.tab === name));
+      }
+      const params = new URLSearchParams(location.search);
+      const initial = params.get('tab');
+      const valid = Array.from(tabs).map(t => t.dataset.target);
+      activate(valid.includes(initial) ? initial : 'about');
+      tabs.forEach(t => t.addEventListener('click', () => {
+        activate(t.dataset.target);
+        history.replaceState(null, '', '?tab=' + t.dataset.target);
+      }));
+    })();
+  </script>
 </body>
 </html>
